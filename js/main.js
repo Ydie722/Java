@@ -1,10 +1,17 @@
-const numbers = [0, 1, 2, 3];
+const letters = ["c", "d"];
+console.log(letters);
+letters.push("e", "f");
+letters.unshift("a", "b");
+console.log(letters);
+console.log(letters.includes("c"));
 
-const newNum = numbers.forEach((number) => console.log(number * 2));
-console.log(newNum);
+// const numbers = [0, 1, 2, 3];
 
-const mapNumb = numbers.map((number) => number * 2);
-console.log(mapNumb);
+// const newNum = numbers.forEach((number) => console.log(number * 2));
+// console.log(newNum);
+
+// const mapNumb = numbers.map((number) => number * 2);
+// console.log(mapNumb);
 
 // const numbers = [0, 23, 48, 175, 2, 34, 11];
 
