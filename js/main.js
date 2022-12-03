@@ -1,23 +1,54 @@
-const colors = ["niebieski"];
-colors.unshift("czerwony");
-colors.push("pomaranczowy");
-console.log(colors);
-
-for (let i = 0; i < colors.length; i++) {
-	console.log(
-		`Moj ulubiony color to: ${
-			colors[i].charAt(0).toUpperCase() + colors[i].slice(1)
-		}`
-	);
+const cars = "Audi, Mercedes, BMW, Nissan, Dodge";
+const carsArr = cars.split(", ");
+console.log(carsArr);
+if (cars.length > 3) {
+	console.log("JEST OK");
+} else {
+	console.log("Nie jest OK");
 }
 
-for (const number of colors) {
-	console.log(
-		`Moj ulubiony kolor to jest : ${
-			number.charAt(0).toUpperCase() + number.slice(1)
-		}`
-	);
+cars.length > 3 ? console.log("JUTA") : console.log("KOOKs");
+
+if (carsArr.includes("Audi")) {
+	carsArr.unshift("majbach");
+} else {
+	carsArr.pop();
 }
+
+console.log(carsArr);
+
+// if (newCars.lenght > 3) {
+// 	console.log("Jest OK!");
+// } else {
+// 	console.log("Nie jeste OK!");
+// }
+
+// if(newCars.includes("Audi")){
+//     console.log(newCars.push('Majbach'));
+// }else {
+//     console.log(newCars.pop());
+// }
+
+// const colors = ["niebieski"];
+// colors.unshift("czerwony");
+// colors.push("pomaranczowy");
+// console.log(colors);
+
+// for (let i = 0; i < colors.length; i++) {
+// 	console.log(
+// 		`Moj ulubiony color to: ${
+// 			colors[i].charAt(0).toUpperCase() + colors[i].slice(1)
+// 		}`
+// 	);
+// }
+
+// for (const number of colors) {
+// 	console.log(
+// 		`Moj ulubiony kolor to jest : ${
+// 			number.charAt(0).toUpperCase() + number.slice(1)
+// 		}`
+// 	);
+// }
 
 // const numbers = [1, 5, 13, 26, 48];
 // const newArr = numbers.map((number) => number * 5);
