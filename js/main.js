@@ -1,9 +1,17 @@
-const letters = ["c", "d"];
-console.log(letters);
-letters.push("e", "f");
-letters.unshift("a", "b");
-console.log(letters);
-console.log(letters.includes("c"));
+const numbers = [1, 2, 3];
+const food = ["hamburger", "frytki", "pizza"];
+console.log(numbers.concat(food));
+const menu = numbers.concat(food);
+console.log(...menu);
+
+const newArr = [...numbers, ...food];
+console.log(newArr);
+// const letters = ["c", "d"];
+// console.log(letters);
+// letters.push("e", "f");
+// letters.unshift("a", "b");
+// console.log(letters);
+// console.log(letters.includes("c"));
 
 // const numbers = [0, 1, 2, 3];
 
