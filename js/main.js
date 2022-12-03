@@ -1,11 +1,45 @@
-const numbers = [1, 2, 3];
-const food = ["hamburger", "frytki", "pizza"];
-console.log(numbers.concat(food));
-const menu = numbers.concat(food);
-console.log(...menu);
+const colors = ["niebieski"];
+colors.unshift("czerwony");
+colors.push("pomaranczowy");
+console.log(colors);
 
-const newArr = [...numbers, ...food];
-console.log(newArr);
+for (let i = 0; i < colors.length; i++) {
+	console.log(
+		`Moj ulubiony color to: ${
+			colors[i].charAt(0).toUpperCase() + colors[i].slice(1)
+		}`
+	);
+}
+
+for (const number of colors) {
+	console.log(
+		`Moj ulubiony kolor to jest : ${
+			number.charAt(0).toUpperCase() + number.slice(1)
+		}`
+	);
+}
+
+// const numbers = [1, 5, 13, 26, 48];
+// const newArr = numbers.map((number) => number * 5);
+// console.log(newArr);
+
+// for (const number of newArr) {
+// 	if (number % 2 === 0) {
+// 		console.log(`Liczba jest parzysta: ${number}`);
+// 	} else {
+// 		console.log(`liczba nie jest parzysta: ${number}`);
+// 	}
+// }
+
+// const numbers = [1, 2, 3];
+// const food = ["hamburger", "frytki", "pizza"];
+// console.log(numbers.concat(food));
+// const menu = numbers.concat(food);
+// console.log(...menu);
+
+// const newArr = [...numbers, ...food];
+// console.log(newArr);
+
 // const letters = ["c", "d"];
 // console.log(letters);
 // letters.push("e", "f");
