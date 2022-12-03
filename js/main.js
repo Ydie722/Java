@@ -1,20 +1,43 @@
-const numbers = [0, 0, 1, 1, 2, 2, 2];
-const colors = ["red", "green", "blue", true, 123];
-const cars = [123, true, "audi", "bmw", "mercedes", "ferrari", "🤷‍♂️", "👀"];
+const numbers = [0, 1, 2, 3];
 
-const numbers2 = numbers.slice(0, 2);
-console.log(numbers2);
+const newNum = numbers.forEach((number) => console.log(number * 2));
+console.log(newNum);
 
-const numbers3 = numbers.slice(-3);
-console.log(numbers3);
+const mapNumb = numbers.map((number) => number * 2);
+console.log(mapNumb);
 
-const randomStuff = colors.splice(-2);
-console.log(colors);
-console.log(randomStuff);
+// const numbers = [0, 23, 48, 175, 2, 34, 11];
 
-const newCars = cars.splice(2, 4, "test");
-console.log(cars);
-console.log(newCars);
+// // function number(x) {
+// // 	// return x % 2 === 0;
+// //     return x > 50
+// // }
+
+// numbers.forEach((num) => console.log(num));
+
+// console.log(numbers.includes(10));
+
+// console.log(numbers.indexOf(234));
+
+// console.log(numbers.filter(number));
+
+// const numbers = [0, 0, 1, 1, 2, 2, 2];
+// const colors = ["red", "green", "blue", true, 123];
+// const cars = [123, true, "audi", "bmw", "mercedes", "ferrari", "🤷‍♂️", "👀"];
+
+// const numbers2 = numbers.slice(0, 2);
+// console.log(numbers2);
+
+// const numbers3 = numbers.slice(-3);
+// console.log(numbers3);
+
+// const randomStuff = colors.splice(-2);
+// console.log(colors);
+// console.log(randomStuff);
+
+// const newCars = cars.splice(2, 4, "test");
+// console.log(cars);
+// console.log(newCars);
 
 // const numbers = [1, 2, 3, 4, 5];
 
