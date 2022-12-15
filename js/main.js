@@ -1,5 +1,33 @@
+// const btn = document.querySelector("button");
 
+// const test = (e) => {
+// 	console.log(e.target.classList);
+// };
 
+// btn.addEventListener("click", test);
+
+// const btn1 = document.querySelector(".btn-1");
+// const btn2 = document.querySelector(".btn-2");
+// const btn3 = document.querySelector(".btn-3");
+
+// btn1.addEventListener("click", function () {
+// 	console.log("Klikniteo mnie");
+// });
+
+// btn2.addEventListener("mouseover", () => console.log("Najechano na mnie"));
+
+// const test = () => {
+// 	console.log("Double click");
+// };
+
+// btn3.addEventListener("dblclick", test);
+
+// const div = document.querySelector("div");
+// const ulList = document.createElement("ul");
+// const p = document.createElement("p");
+// ulList.textContent = "Czesc";
+
+// div.append(ulList, p);
 
 // const divek = document.querySelector("div");
 // const parr = document.createElement("p");
