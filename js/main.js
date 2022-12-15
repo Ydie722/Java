@@ -1,21 +1,203 @@
-const cars = "Audi, Mercedes, BMW, Nissan, Dodge";
-const carsArr = cars.split(", ");
-console.log(carsArr);
-if (cars.length > 3) {
-	console.log("JEST OK");
-} else {
-	console.log("Nie jest OK");
-}
 
-cars.length > 3 ? console.log("JUTA") : console.log("KOOKs");
 
-if (carsArr.includes("Audi")) {
-	carsArr.unshift("majbach");
-} else {
-	carsArr.pop();
-}
 
-console.log(carsArr);
+// const divek = document.querySelector("div");
+// const parr = document.createElement("p");
+
+// divek.appendChild(parr);
+
+// const ulList = document.createElement("ul");
+// const ulElement = document.createElement("li");
+// ulElement.textContent = "CZESC";
+
+// document.body.appendChild(ulList);
+// ulList.appendChild(ulElement);
+
+// const heading = document.querySelector("h1");
+// const parr = document.querySelectorAll("p");
+// const divOne = document.querySelector(".test");
+// const pInDiv = divOne.querySelector(".test");
+
+// const test = document.querySelector("ul li");
+// console.log(test);
+
+// const ulList = document.querySelector("ul");
+// console.log(ulList);
+
+// const liItem = ulList.querySelector("li");
+// console.log(liItem);
+
+// const liItems = document.querySelectorAll(".test");
+// console.log(liItems);
+
+// const test = document.getElementById("item");
+// console.log(test);
+
+// const test2 = document.getElementsByTagName("li");
+// console.log(test2);
+
+// const test3 = document.getElementsByClassName("test");
+// console.log(test3);
+
+// let num = 10;
+// let numbers = [];
+
+// for (let i = 0; i < num; i++) {
+// 	numbers.push(i);
+// }
+
+// const funOne = (x) => {
+// 	if (x % 3 === 0 && x !== 0) {
+// 		console.log(`${x} jest podzielne przez 3`);
+// 	} else {
+// 		console.log(`${x} nie jest podzielne przez 3`);
+// 	}
+// };
+
+// numbers.forEach(funOne)
+
+// let celsius;
+// let temp;
+
+// const fahrenheit = (x) => {
+// 	celsius = x;
+// 	temp = x * 1.8 + 32;
+
+// 	console.log(`${celsius} = ${temp}`);
+// };
+
+// fahrenheit(30);
+// let score;
+
+// const add = (x, y) => {
+// 	score = x + y;
+// 	// if (score % 2 == 0) {
+// 	// 	funOne();
+// 	// } else {
+// 	// 	funTwo();
+// 	// }
+
+// 	score % 2 == 0 ? funOne() : funTwo();
+// };
+// const funOne = () => {
+// 	console.log(`Liczba ${score} jest parzysta`);
+// };
+// const funTwo = () => {
+// 	console.log(`Liczba ${x} jest nie parzysta`);
+// };
+
+// add(5, 5);
+
+// const numbers = [0.5, 4, "abc"];
+// const names = ["Lisa", "Lily", "Adam", "Przemek"];
+// numbers.forEach((num) => console.log(num));
+// const bigNames = names.map((name) => name.toUpperCase());
+// console.log(bigNames);
+
+// const showBigNames = (name) => {
+// 	console.log(name.toUpperCase());
+// };
+
+// names.forEach(showBigNames);
+
+// names.forEach((elo) => console.log(elo.toUpperCase()));
+
+// const name = "lis";
+// const test = () => {
+// 	console.log(`Name w funkcj - ${name}`);
+
+// };
+// test();
+// console.log(`Name poza funkcjią - ${name}`);
+
+// //SPREAD
+// const arr = [1, 2, 3, 4];
+// console.log(arr);
+// console.log(...arr);
+
+// //REST
+// const numbers = (x, y, ...z) => {
+// 	console.log(x, y, z);
+// };
+// numbers(123,23423,123213,1235,345)
+
+// const hello = (name = "Drogi uzytkowniku") => {
+// 	console.log(`Czesc ${name}, jak sie masz`);
+// };
+
+// hello();
+// hello("maciek");
+
+// const plus = (x, y) => {
+// 	console.log(x + y);
+// };
+
+// plus(5, 6);
+
+// const days = ["poniedzialek", "wtorek", "sroda"];
+// const days2 = days.forEach(function (day) {
+// 	console.log(day);
+// });
+
+// const days3 = days.forEach((day) => console.log(day));
+
+// const arrowFunction = () => {
+// 	// asdsa
+// };
+
+// const test2 = (name) => {
+// 	console.log(`Mam na imie: ${name}`);
+// };
+
+// test2("Lisa");
+
+// const heading = document.querySelector("h1");
+// heading.addEventListener("click", function () {
+// 	console.log("Click");
+// });
+
+// const test = function (x, y) {
+// 	console.log(`Cześć jestem ${x} mam ${y} lat`);
+// };
+
+// test("Maciek", 20);
+
+// function test() {
+// 	console.log("czesc");
+// }
+
+// test();
+
+// const helloWorld = function () {
+// 	console.log("ZCXdas");
+// };
+
+// helloWorld();
+
+// function add(x, y) {
+// 	return x + y;
+// }
+
+// add(5, 4);
+
+// const cars = "Audi, Mercedes, BMW, Nissan, Dodge";
+// const carsArr = cars.split(", ");
+// console.log(carsArr);
+// if (cars.length > 3) {
+// 	console.log("JEST OK");
+// } else {
+// 	console.log("Nie jest OK");
+// }
+
+// cars.length > 3 ? console.log("JUTA") : console.log("KOOKs");
+
+// if (carsArr.includes("Audi")) {
+// 	carsArr.unshift("majbach");
+// } else {
+// 	carsArr.pop();
+// }
+
+// console.log(carsArr);
 
 // if (newCars.lenght > 3) {
 // 	console.log("Jest OK!");

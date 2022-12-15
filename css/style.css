@@ -16,3 +16,7 @@ h1::after {
 	height: 5px;
 	background-color: green;
 }
+
+ul {
+	color: wheat;
+}
