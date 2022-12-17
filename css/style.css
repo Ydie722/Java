@@ -1,22 +1,14 @@
 body {
+	color: wheat;
 	background-color: black;
 }
 
-h1 {
-	position: relative;
-	color: white;
-	text-transform: uppercase;
-}
-h1::after {
-	content: "";
-	position: absolute;
-	bottom: -10px;
-	left: 0;
-	width: 10%;
-	height: 5px;
-	background-color: green;
+.header {
+	width: 100%;
+	height: 200px;
+	background-color: tomato;
 }
 
-ul {
-	color: wheat;
+main {
+	display: flex;
 }

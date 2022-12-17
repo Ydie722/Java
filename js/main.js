@@ -1,3 +1,79 @@
+const btn1 = document.querySelector(".btn1");
+const btn2 = document.querySelector(".btn2");
+const p1 = document.querySelector(".p1");
+const p2 = document.querySelector(".p2");
+const divS = document.querySelector(".square");
+
+const hello = () => {
+	console.log("Cześć!");
+};
+
+const change = () => {
+	divS.style.backgroundColor = "red";
+};
+
+const changeTwo = () => {
+	divS.style.backgroundColor = "blue";
+};
+
+const toglo = () => {
+	p1.classList.toggle("show");
+	p2.classList.toggle("show");
+};
+
+btn1.addEventListener("dblclick", hello);
+divS.addEventListener("mouseenter", change);
+divS.addEventListener("mouseleave", changeTwo);
+btn2.addEventListener("click", toglo);
+
+// const ulList = document.createElement("ul");
+// document.body.append(ulList);
+// const number = 10;
+
+// for (let i = 1; i <= number; i++) {
+// 	const liItem = document.createElement("li");
+// 	ulList.append(liItem);
+// 	liItem.textContent = i;
+// }
+
+// const lastLi = ulList.querySelector("li:last-child");
+// lastLi.style.backgroundColor = "blue";
+
+// const ulList = document.createElement("ul");
+// document.body.append(ulList);
+// const number = 10;
+
+// for (let i = 1; i <= number; i++) {
+// 	const liItem = document.createElement("li");
+// 	liItem.textContent = i;
+// 	ulList.append(liItem);
+// }
+
+// const lastli = ulList.querySelector("li:last-child");
+// lastli.textContent = "Jestem ostatnim li";
+
+// lastli.style.backgroundColor = "blue";
+// lastli.style.padding = "20px 40px";
+// lastli.style.fontSize = "48px";
+
+// const head = document.querySelector(".header");
+// const divOne = document.querySelector(".div-one");
+// const divTwo = document.querySelector(".div-two");
+// const btn = document.querySelector("button");
+
+// const test = () => {
+// 	head.classList.toggle("test");
+// 	divOne.classList.toggle("test");
+// 	divTwo.classList.toggle("test");
+// };
+
+// btn.addEventListener("click", test);
+
+// const gold = document.querySelector(".gold");
+// const div = document.createElement("div");
+
+// gold.append(div);
+
 // const btn = document.querySelector("button");
 
 // const test = (e) => {
