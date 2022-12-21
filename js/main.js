@@ -1,30 +1,293 @@
-const btn1 = document.querySelector(".btn1");
-const btn2 = document.querySelector(".btn2");
-const p1 = document.querySelector(".p1");
-const p2 = document.querySelector(".p2");
-const divS = document.querySelector(".square");
+// =================================
+// =================================
+// Projekt #5
+// =================================
+// =================================
 
-const hello = () => {
-	console.log("Cześć!");
-};
+// const brugerBtn = document.querySelector(".burger");
+// const barsIcon = document.querySelector(".fa-bars");
+// const xIco = document.querySelector(".fa-times");
+// const nav = document.querySelector("nav ul");
 
-const change = () => {
-	divS.style.backgroundColor = "red";
-};
+// const handleNav = () => {
+// 	nav.classList.toggle("active");
+// 	brugerBtn.classList.toggle("active");
+// 	barsIcon.classList.toggle("hide");
+// 	xIco.classList.toggle("hide");
+// };
 
-const changeTwo = () => {
-	divS.style.backgroundColor = "blue";
-};
+// brugerBtn.addEventListener("click", handleNav);
 
-const toglo = () => {
-	p1.classList.toggle("show");
-	p2.classList.toggle("show");
-};
+// =================================
+// =================================
+// Projekt #4
+// =================================
+// =================================
 
-btn1.addEventListener("dblclick", hello);
-divS.addEventListener("mouseenter", change);
-divS.addEventListener("mouseleave", changeTwo);
-btn2.addEventListener("click", toglo);
+// const converter = document.querySelector("#converter");
+// const result = document.querySelector(".result");
+// const convBtn = document.querySelector(".conv");
+// const resetBtn = document.querySelector(".reset");
+// const changeBtn = document.querySelector(".change");
+// const one = document.querySelector(".one");
+// const two = document.querySelector(".two");
+
+// const changeParr = () => {
+// 	if (one.textContent === "°C") {
+// 		one.textContent = "°F";
+// 		two.textContent = "°C";
+// 		result.textContent = "";
+// 	} else if (one.textContent === "°F") {
+// 		one.textContent = "°C";
+// 		two.textContent = "°F";
+// 		result.textContent = "";
+// 	}
+// };
+
+// const farere = () => {
+// 	let far = converter.value * 1.8 + 32;
+// 	result.textContent = `${converter.value}°C to ${far.toFixed(1)}°F`;
+// 	converter.value = "";
+// };
+
+// const celss = () => {
+// 	let far = (converter.value - 32) / 1.8;
+// 	result.textContent = `${converter.value}°F to ${far.toFixed(1)}°C`;
+// 	converter.value = "";
+// };
+
+// Opcja 1
+// const check = () => {
+// 	if (converter.value === "") {
+// 		result.textContent = "Wpisz wartość!";
+// 	} else if (one.textContent === "°C") {
+// 		farere();
+// 	} else if (one.textContent === "°F") {
+// 		celss();
+// 	}
+// };
+
+// Opcja 2
+// const check = () => {
+// 	if (converter.value !== "") {
+// 		if (one.textContent === "°C") {
+// 			farere();
+// 		} else {
+// 			celss();
+// 		}
+// 	} else {
+// 		result.textContent = "Wpisz wartość!";
+// 	}
+// };
+
+// const restt = () => {
+// 	result.textContent = "";
+// 	converter.value = "";
+// };
+
+// changeBtn.addEventListener("click", changeParr);
+// convBtn.addEventListener("click", check);
+// resetBtn.addEventListener("click", restt);
+
+// =================================
+// =================================
+// Projekt #3
+// =================================
+// =================================
+
+// const pass = document.querySelector("#password");
+// const p = document.querySelector(".passinfo");
+// const letters = /[a-z]/i;
+// const numbers = /[0-9]/;
+// const special = /[!@#$%^&*()]/;
+// const minValue = 10;
+
+// const showMsg = () => {
+// 	if (
+// 		pass.value.length > minValue &&
+// 		pass.value.match(letters) &&
+// 		pass.value.match(numbers) &&
+// 		pass.value.match(special)
+// 	) {
+// 		p.textContent = "Masz bardzo dobre hasło";
+// 		p.style.color = "lime";
+// 	} else if (
+// 		pass.value.length > minValue &&
+// 		pass.value.match(letters) &&
+// 		pass.value.match(numbers)
+// 	) {
+// 		p.textContent = "Masz dobre hasło";
+// 		p.style.color = "yellow";
+// 	} else {
+// 		p.textContent = "Masz słabe hasło";
+// 		p.style.color = "red";
+// 	}
+// };
+
+// const chechPass = () => {
+// 	if (pass.value !== "") {
+// 		showMsg();
+// 	} else {
+// 		p.textContent = "Nie podałes hasła...";
+// 		p.style.color = "";
+// 	}
+// };
+
+// pass.addEventListener("keyup", chechPass);
+
+// =================================
+// =================================
+// Projekt #2
+// =================================
+// =================================
+
+// const sizeUp = document.querySelector(".sizeUp");
+// const sizeDown = document.querySelector(".sizeDown");
+// const colorBtn = document.querySelector(".color");
+// const p = document.querySelector("p");
+// let size = 36;
+
+// const sizeUpFun = () => {
+// 	if (size >= 60) return;
+// 	size += 5;
+// 	p.style.fontSize = size + "px";
+// };
+
+// const sizeDownFun = () => {
+// 	if (size <= 21) return;
+// 	size -= 5;
+// 	p.style.fontSize = size + "px";
+// };
+
+// const colorChange = () => {
+// 	const r = Math.floor(Math.random() * 255);
+// 	const g = Math.floor(Math.random() * 255);
+// 	const b = Math.floor(Math.random() * 255);
+// 	p.style.color = `rgb(${r},${g},${b})`;
+// };
+
+// colorBtn.addEventListener("click", colorChange);
+// sizeDown.addEventListener("click", sizeDownFun);
+// sizeUp.addEventListener("click", sizeUpFun);
+
+// =================================
+// =================================
+// Projekt #1
+// =================================
+// =================================
+
+// const arrowBtn = document.querySelector(".arrow");
+// const arrowIcon = document.querySelector(".fas");
+// const img = document.querySelector(".item1");
+
+// const adding = () => {
+// 	img.classList.toggle("hide");
+// 	if (img.classList.contains("hide")) {
+// 		arrowIcon.style.transform = "rotate(180deg)";
+// 	} else {
+// 		arrowIcon.style.transform = "rotate(0)";
+// 	}
+// };
+
+// arrowBtn.addEventListener("click", adding);
+
+// let nameE = document.querySelector(".name").value;
+// const btn = document.querySelector(".btnik");
+// console.log(nameE);
+// console.log(btn);
+
+// const check = (nameE) => {
+// 	if (nameE.length === 0) {
+// 		console.log("KUTAZ");
+// 	} else {
+// 		console.log("nameE");
+// 	}
+// };
+
+// btn.addEventListener("click", check);
+
+// const li = document.querySelectorAll("li");
+// let number = 1;
+
+// for (let liItem of li) {
+// 	liItem.textContent = number;
+// 	liItem.dataset.id = number;
+// 	number++;
+// }
+
+// for (let liItem of li) {
+// 	liItem.textContent = number;
+// 	liItem.dataset.id = number;
+// 	number++;
+// }
+
+// for (let i = 0; i < li.length; i++) {
+// 	li[i].textContent = number;
+// 	li[i].dataset.id = number;
+// 	number++;
+// }
+
+// for (let i = 0; i < li.length; i++) {
+// 	li[i].textContent = number;
+// 	li[i].dataset.id = number;
+// 	number++;
+// }
+
+// const threeLi = document.querySelector("[data-id='3']");
+// console.log(threeLi);
+// const divek = threeLi.closest(".wrapper");
+// console.log(divek);
+// const image = document.querySelector("img");
+// image.setAttribute(
+// 	"src",
+// 	"https://sdpl.b-cdn.net/17166-large_default/obrazek-obrazki-18paz.jpg"
+// );
+// image.setAttribute("alt", "doggo");
+
+// const funcja = () => {
+// 	let wynik = 20 * 20;
+// 	console.log(wynik);
+// };
+
+// setTimeout(funcja, 2000);
+
+// const child = document.querySelector(".middle-child");
+// console.log(child);
+// console.log(child.previousElementSibling);
+// console.log(child.nextElementSibling);
+
+// const parentEl = child.parentElement;
+// console.log(parentEl);
+
+// console.log(child.closest('.grandpa'));
+
+// const btn1 = document.querySelector(".btn1");
+// const btn2 = document.querySelector(".btn2");
+// const p1 = document.querySelector(".p1");
+// const p2 = document.querySelector(".p2");
+// const divS = document.querySelector(".square");
+
+// const hello = () => {
+// 	console.log("Cześć!");
+// };
+
+// const change = () => {
+// 	divS.style.backgroundColor = "red";
+// };
+
+// const changeTwo = () => {
+// 	divS.style.backgroundColor = "blue";
+// };
+
+// const toglo = () => {
+// 	p1.classList.toggle("show");
+// 	p2.classList.toggle("show");
+// };
+
+// btn1.addEventListener("dblclick", hello);
+// divS.addEventListener("mouseenter", change);
+// divS.addEventListener("mouseleave", changeTwo);
+// btn2.addEventListener("click", toglo);
 
 // const ulList = document.createElement("ul");
 // document.body.append(ulList);
