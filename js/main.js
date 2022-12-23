@@ -1,5 +1,167 @@
 // =================================
 // =================================
+// Projekt #7 !!!!!
+// =================================
+// =================================
+
+let todoInput;
+let errorInfo;
+let addBtn;
+let ulList;
+let newTodos;
+
+// POP UP
+let popup;
+let popupInfo;
+let todoToEdit;
+let popupInput;
+let popupAddBtn;
+let popupCloseBtn;
+
+const main = () => {
+	prepareDOMElemenst();
+	prepareDOMEvents();
+};
+
+const prepareDOMElemenst = () => {
+	todoInput = document.querySelector(".todo-input");
+	errorInfo = document.querySelector(".error-info");
+	addBtn = document.querySelector(".btn-add");
+	ulList = document.querySelector(".todolist ul");
+	//
+	popup = document.querySelector(".popup");
+	popupInfo = document.querySelector(".popup-info");
+	popupInput = document.querySelector(".popup-input");
+	popupAddBtn = document.querySelector(".accept");
+	popupCloseBtn = document.querySelector(".cancel");
+};
+
+const prepareDOMEvents = () => {
+	addBtn.addEventListener("click", addNewTodo);
+	ulList.addEventListener("click", checkClick);
+	popupCloseBtn.addEventListener("click", closePopup);
+	popupAddBtn.addEventListener("click", changeTodoText);
+	todoInput.addEventListener("keyup", enterKetCheck);
+};
+
+const addNewTodo = () => {
+	if (todoInput.value !== "") {
+		newTodos = document.createElement("li");
+		newTodos.textContent = todoInput.value;
+		createToolsArea();
+		ulList.append(newTodos);
+
+		todoInput.value = "";
+		errorInfo.textContent = "";
+	} else {
+		errorInfo.textContent = "Wpisz treść zadania!";
+	}
+};
+
+const createToolsArea = () => {
+	const toolsPanel = document.createElement("div");
+	toolsPanel.classList.add("tools");
+	newTodos.append(toolsPanel);
+
+	const btnComplete = document.createElement("button");
+	btnComplete.classList.add("complete");
+	btnComplete.innerHTML = '<i class="fas fa-check"></i>';
+
+	const btnEdit = document.createElement("button");
+	btnEdit.classList.add("edit");
+	btnEdit.textContent = "EDIT";
+
+	const btnDelete = document.createElement("button");
+	btnDelete.classList.add("delete");
+	btnDelete.innerHTML = '<i class="fas fa-times"></i>';
+
+	toolsPanel.append(btnComplete, btnEdit, btnDelete);
+};
+
+// funkcje POPUP
+
+const checkClick = (e) => {
+	if (e.target.matches(".complete")) {
+		e.target.closest("li").classList.toggle("completed");
+		e.target.classList.toggle("completed");
+	} else if (e.target.matches(".edit")) {
+		editTodo(e);
+	} else if (e.target.matches(".delete")) {
+		deleteTodo(e);
+	}
+};
+
+const editTodo = (e) => {
+	todoToEdit = e.target.closest("li");
+	popupInput.value = todoToEdit.firstChild.textContent;
+	popup.style.display = "flex";
+};
+
+const closePopup = () => {
+	popup.style.display = "none";
+	popupInfo.textContent = "";
+};
+
+const changeTodoText = () => {
+	if (popupInput.value !== "") {
+		todoToEdit.firstChild.textContent = popupInput.value;
+		popup.style.display = "none";
+		popupInfo.textContent = "";
+	} else {
+		popupInfo.textContent = "Musisz podac jakąś treść!";
+	}
+};
+
+const deleteTodo = (e) => {
+	e.target.closest("li").remove();
+
+	const allTodos = ulList.querySelectorAll("li"); // Element tablico podobny
+	if (allTodos.length === 0) {
+		errorInfo.textContent = "Brak zadań na liście...";
+	}
+};
+
+// Enter
+const enterKetCheck = (e) => {
+	if (e.key === "Enter") {
+		addNewTodo();
+	}
+};
+
+document.addEventListener("DOMContentLoaded", main);
+
+// =================================
+// =================================
+// Projekt #6
+// =================================
+// =================================
+
+// const currentDay = document.querySelector(".current-day");
+// const funFact = document.querySelector(".fun-fact");
+
+// const facts = [
+// 	"Krokodyl nie potrafi wystawić języka.",
+// 	"Każdy człowiek spędził około pół godziny jako pojedyncza komórka.",
+// 	"Dźwięk przemieszcza się 15 razy szybciej przez stal niż przez powietrze.",
+// 	"Leniwce potrzebują dwóch tygodni na strawienie jedzenia.",
+// 	"Goryle śpią nawet czternaście godzin dziennie.",
+// 	"Język kameleona jest dwukrotnie dłuższy od jego ciała.",
+// 	"Chińczycy w ciągu roku zużywają około 80 miliardów pałeczek.",
+// 	"Żeby wejść na Wieżę Eiffla trzeba pokonać aż 1710 stopni.",
+// ];
+
+// const day = new Date();
+// currentDay.textContent = day.toLocaleDateString("default", { weekday: "long" });
+
+// const showRandomFact = () => {
+// 	const number = Math.floor(Math.random() * facts.length);
+// 	funFact.textContent = facts[number];
+// };
+
+// showRandomFact();
+
+// =================================
+// =================================
 // Projekt #5
 // =================================
 // =================================
