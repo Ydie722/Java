@@ -1,134 +1,269 @@
-// =================================
-// =================================
-// Projekt #7 !!!!!
-// =================================
-// =================================
+// // =================================
+// // =================================
+// // Obiekty
+// // =================================
+// // =================================
 
-let todoInput;
-let errorInfo;
-let addBtn;
-let ulList;
-let newTodos;
+function test() {
+	console.log(this);
+	console.log(this.name);
+}
 
-// POP UP
-let popup;
-let popupInfo;
-let todoToEdit;
-let popupInput;
-let popupAddBtn;
-let popupCloseBtn;
-
-const main = () => {
-	prepareDOMElemenst();
-	prepareDOMEvents();
+const car1 = {
+	name: "Audi",
 };
 
-const prepareDOMElemenst = () => {
-	todoInput = document.querySelector(".todo-input");
-	errorInfo = document.querySelector(".error-info");
-	addBtn = document.querySelector(".btn-add");
-	ulList = document.querySelector(".todolist ul");
-	//
-	popup = document.querySelector(".popup");
-	popupInfo = document.querySelector(".popup-info");
-	popupInput = document.querySelector(".popup-input");
-	popupAddBtn = document.querySelector(".accept");
-	popupCloseBtn = document.querySelector(".cancel");
+const car2 = {
+	name: "Dodge",
+};
+const car3 = {
+	name: "Nissan",
 };
 
-const prepareDOMEvents = () => {
-	addBtn.addEventListener("click", addNewTodo);
-	ulList.addEventListener("click", checkClick);
-	popupCloseBtn.addEventListener("click", closePopup);
-	popupAddBtn.addEventListener("click", changeTodoText);
-	todoInput.addEventListener("keyup", enterKetCheck);
-};
+test.bind(car1)();
 
-const addNewTodo = () => {
-	if (todoInput.value !== "") {
-		newTodos = document.createElement("li");
-		newTodos.textContent = todoInput.value;
-		createToolsArea();
-		ulList.append(newTodos);
+// Zadanie Obiekty
 
-		todoInput.value = "";
-		errorInfo.textContent = "";
-	} else {
-		errorInfo.textContent = "Wpisz treść zadania!";
-	}
-};
+// const btnOne = document.querySelector(".btn-one");
+// const btnTwo = document.querySelector(".btn-two");
+// const btnThree = document.querySelector(".btn-three");
+// const p = document.querySelector("p");
 
-const createToolsArea = () => {
-	const toolsPanel = document.createElement("div");
-	toolsPanel.classList.add("tools");
-	newTodos.append(toolsPanel);
+// function Konst(meal, prize) {
+// 	this.meal = meal;
+// 	this.prize = prize;
+// }
 
-	const btnComplete = document.createElement("button");
-	btnComplete.classList.add("complete");
-	btnComplete.innerHTML = '<i class="fas fa-check"></i>';
+// const newMeal = new Konst("Pizza", 35);
+// const newMeal2 = new Konst("Burger", 22);
+// const newMeal3 = new Konst("Hotdog", 8);
 
-	const btnEdit = document.createElement("button");
-	btnEdit.classList.add("edit");
-	btnEdit.textContent = "EDIT";
+// Konst.prototype.que = function () {
+// 	console.log(`${this.meal} kosztuje ${this.prize} zł`);
+// };
 
-	const btnDelete = document.createElement("button");
-	btnDelete.classList.add("delete");
-	btnDelete.innerHTML = '<i class="fas fa-times"></i>';
+// btnOne.addEventListener("click", () => newMeal.que());
+// btnTwo.addEventListener("click", () => newMeal2.que());
+// btnThree.addEventListener("click", () => newMeal3 .que());
 
-	toolsPanel.append(btnComplete, btnEdit, btnDelete);
-};
+// const myObject = {
+// 	key: value,
+// 	key: value,
+// 	key: value,
+// };
 
-// funkcje POPUP
+//KOnstruktor
+// function User(name, age) {
+// 	this.name = name;
+// 	this.age = age;
+// }
 
-const checkClick = (e) => {
-	if (e.target.matches(".complete")) {
-		e.target.closest("li").classList.toggle("completed");
-		e.target.classList.toggle("completed");
-	} else if (e.target.matches(".edit")) {
-		editTodo(e);
-	} else if (e.target.matches(".delete")) {
-		deleteTodo(e);
-	}
-};
+// const newUser = new User("Klaudia", 23);
+// const newUser2 = new User("Lily", 34);
+// const newUser3 = new User("Majek", 45);
 
-const editTodo = (e) => {
-	todoToEdit = e.target.closest("li");
-	popupInput.value = todoToEdit.firstChild.textContent;
-	popup.style.display = "flex";
-};
+// console.log(newUser, newUser2, newUser3);
 
-const closePopup = () => {
-	popup.style.display = "none";
-	popupInfo.textContent = "";
-};
+// User.prototype.hello = function () {
+// 	console.log(`Cześć ${this.name}`);
+// };
 
-const changeTodoText = () => {
-	if (popupInput.value !== "") {
-		todoToEdit.firstChild.textContent = popupInput.value;
-		popup.style.display = "none";
-		popupInfo.textContent = "";
-	} else {
-		popupInfo.textContent = "Musisz podac jakąś treść!";
-	}
-};
+// User.prototype.country = "Polska";
+// console.log(newUser2.country);
+// newUser.hello();
 
-const deleteTodo = (e) => {
-	e.target.closest("li").remove();
+// const user = {
+// 	name: "Klaudia",
+// 	showName() {
+// 		console.log(this.name);
+// 	},
+// };
 
-	const allTodos = ulList.querySelectorAll("li"); // Element tablico podobny
-	if (allTodos.length === 0) {
-		errorInfo.textContent = "Brak zadań na liście...";
-	}
-};
+// user.showName()
 
-// Enter
-const enterKetCheck = (e) => {
-	if (e.key === "Enter") {
-		addNewTodo();
-	}
-};
+// const user = {
+// 	name: "Klaudia",
+// 	age: 23,
+// 	sex: "female",
+// 	"hair-color": "blonde",
+// };
 
-document.addEventListener("DOMContentLoaded", main);
+// for (const data in user) {
+// 	console.log(user[data]);
+// }
+
+// const dogName = "Drops";
+// const dogAge = 5;
+
+// const dog = {
+// 	// name: dogName,
+// 	// age: dogAge,
+// 	dogName,
+// 	dogAge,
+// };
+
+// dog["Rasa-Psa"] = "Lablador";
+// dog.color = "niebieski";
+
+// console.log(dog);
+
+// const user = {
+// 	name: "Klaudia",
+// 	age: 23,
+// };
+
+// user.country = "Polska";
+// user["fav-color"] = "niebieski";
+// console.log(user);
+
+// const newUser = {
+// 	name: "Lisa",
+// 	age: 23,
+// 	car: {
+// 		brand: "Audi",
+// 		model: "A3",
+// 		color: "Czarny",
+// 		sound(){
+// 			console.log("Brum brum");
+// 		},
+// 	},
+// };
+
+// newUser.car.sound();
+
+// // =================================
+// // =================================
+// // Projekt #7 !!!!!
+// // =================================
+// // =================================
+
+// let todoInput;
+// let errorInfo;
+// let addBtn;
+// let ulList;
+// let newTodos;
+
+// // POP UP
+// let popup;
+// let popupInfo;
+// let todoToEdit;
+// let popupInput;
+// let popupAddBtn;
+// let popupCloseBtn;
+
+// const main = () => {
+// 	prepareDOMElemenst();
+// 	prepareDOMEvents();
+// };
+
+// const prepareDOMElemenst = () => {
+// 	todoInput = document.querySelector(".todo-input");
+// 	errorInfo = document.querySelector(".error-info");
+// 	addBtn = document.querySelector(".btn-add");
+// 	ulList = document.querySelector(".todolist ul");
+// 	//
+// 	popup = document.querySelector(".popup");
+// 	popupInfo = document.querySelector(".popup-info");
+// 	popupInput = document.querySelector(".popup-input");
+// 	popupAddBtn = document.querySelector(".accept");
+// 	popupCloseBtn = document.querySelector(".cancel");
+// };
+
+// const prepareDOMEvents = () => {
+// 	addBtn.addEventListener("click", addNewTodo);
+// 	ulList.addEventListener("click", checkClick);
+// 	popupCloseBtn.addEventListener("click", closePopup);
+// 	popupAddBtn.addEventListener("click", changeTodoText);
+// 	todoInput.addEventListener("keyup", enterKetCheck);
+// };
+
+// const addNewTodo = () => {
+// 	if (todoInput.value !== "") {
+// 		newTodos = document.createElement("li");
+// 		newTodos.textContent = todoInput.value;
+// 		createToolsArea();
+// 		ulList.append(newTodos);
+
+// 		todoInput.value = "";
+// 		errorInfo.textContent = "";
+// 	} else {
+// 		errorInfo.textContent = "Wpisz treść zadania!";
+// 	}
+// };
+
+// const createToolsArea = () => {
+// 	const toolsPanel = document.createElement("div");
+// 	toolsPanel.classList.add("tools");
+// 	newTodos.append(toolsPanel);
+
+// 	const btnComplete = document.createElement("button");
+// 	btnComplete.classList.add("complete");
+// 	btnComplete.innerHTML = '<i class="fas fa-check"></i>';
+
+// 	const btnEdit = document.createElement("button");
+// 	btnEdit.classList.add("edit");
+// 	btnEdit.textContent = "EDIT";
+
+// 	const btnDelete = document.createElement("button");
+// 	btnDelete.classList.add("delete");
+// 	btnDelete.innerHTML = '<i class="fas fa-times"></i>';
+
+// 	toolsPanel.append(btnComplete, btnEdit, btnDelete);
+// };
+
+// // funkcje POPUP
+
+// const checkClick = (e) => {
+// 	if (e.target.matches(".complete")) {
+// 		e.target.closest("li").classList.toggle("completed");
+// 		e.target.classList.toggle("completed");
+// 	} else if (e.target.matches(".edit")) {
+// 		editTodo(e);
+// 	} else if (e.target.matches(".delete")) {
+// 		deleteTodo(e);
+// 	}
+// };
+
+// const editTodo = (e) => {
+// 	todoToEdit = e.target.closest("li");
+// 	popupInput.value = todoToEdit.firstChild.textContent;
+// 	popup.style.display = "flex";
+// };
+
+// const closePopup = () => {
+// 	popup.style.display = "none";
+// 	popupInfo.textContent = "";
+// };
+
+// const changeTodoText = () => {
+// 	if (popupInput.value !== "") {
+// 		todoToEdit.firstChild.textContent = popupInput.value;
+// 		popup.style.display = "none";
+// 		popupInfo.textContent = "";
+// 	} else {
+// 		popupInfo.textContent = "Musisz podac jakąś treść!";
+// 	}
+// };
+
+// const deleteTodo = (e) => {
+// 	e.target.closest("li").remove();
+
+// 	const allTodos = ulList.querySelectorAll("li"); // Element tablico podobny
+// 	if (allTodos.length === 0) {
+// 		errorInfo.textContent = "Brak zadań na liście...";
+// 	} else {
+// 		errorInfo.textContent = "";
+// 	}
+// };
+
+// // Enter
+// const enterKetCheck = (e) => {
+// 	if (e.key === "Enter") {
+// 		addNewTodo();
+// 	}
+// };
+
+// document.addEventListener("DOMContentLoaded", main);
 
 // =================================
 // =================================
