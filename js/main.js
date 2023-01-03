@@ -4,23 +4,138 @@
 // // =================================
 // // =================================
 
-function test() {
-	console.log(this);
-	console.log(this.name);
-}
-
-const car1 = {
-	name: "Audi",
+const user = {
+	name: "Lily",
+	age: 23,
 };
 
-const car2 = {
-	name: "Dodge",
-};
-const car3 = {
-	name: "Nissan",
+const pet = {
+	name: "Drops",
+	type: "dog",
 };
 
-test.bind(car1)();
+const userInfo = Object.assign({}, user, pet);
+console.log(user);
+console.log(pet);
+console.log(userInfo);
+
+const userCopy = Object.assign({}, user);
+userCopy.age = 25; 
+console.log(userCopy);
+
+// class Animal {
+// 	constructor(name) {
+// 		this.name = name;
+// 	}
+// 	sound() {
+// 		console.log(`Zwierzak robi "hau hau".`);
+// 	}
+// }
+
+// class Dog extends Animal {
+// 	constructor(name, age) {
+// 		super(name);
+// 		this.age = age;
+// 	}
+// }
+
+// class Cat extends Animal {
+// 	sound() {
+// 		console.log(`Miał`);
+// 	}
+// }
+
+// const dog = new Dog("Drops", 23);
+// dog.sound();
+// console.log(dog);
+
+// const cat = new Cat("kot");
+// cat.sound();
+// console.log(cat);
+
+// function Person(name, age) {
+// 	this.name = name;
+// 	this.age = age;
+// }
+
+// Person.prototype.sayHi = function () {
+// 	console.log(`Cześć, jestem ${this.name}`);
+// };
+// Person.prototype.showAge = function () {
+// 	console.log(`Mam ${this.age} lat/a`);
+// };
+
+// const person1 = new Person("majek", 23);
+
+// console.log(person1);
+// person1.sayHi();
+// person1.showAge();
+
+// class Person2 {
+// 	constructor(name, age) {
+// 		this.name = name;
+// 		this.age = age;
+// 	}
+// 	sayHi() {
+// 		console.log(`Cześć, jestem ${this.name}`);
+// 	}
+// 	showAge() {
+// 		console.log(`Mam ${this.age} lat/a`);
+// 	}
+// }
+
+// const person2 = new Person2("Ania", 33);
+// person2.sayHi();
+// person2.showAge();
+
+// function Food(name, prize, weight) {
+// 	this.name = name;
+// 	this.prize = prize;
+// 	this.weight = weight;
+// }
+
+// const food1 = new Food("Burger", 25, 1);
+// console.log(food1);
+
+// Food.prototype.showIt = function () {
+// 	console.log(`${this.name} kosztuje ${this.prize} i waży ${this.weight}`);
+// };
+
+// food1.showIt();
+
+// class Eating {
+// 	constructor(name, prize, weight) {
+// 		this.name = name;
+// 		this.prize = prize;
+// 		this.weight = weight;
+// 	}
+// 	showE() {
+// 		console.log(
+// 			`${this.name} kosztuje ${this.prize}zł i waży ${this.weight}kg`
+// 		);
+// 	}
+// }
+
+// const food2 = new Eating("pizza", 22, 2);
+// console.log(food2);
+// food2.showE();
+// function test() {
+// 	console.log(this);
+// 	console.log(this.name);
+// }
+
+// const car1 = {
+// 	name: "Audi",
+// };
+
+// const car2 = {
+// 	name: "Dodge",
+// };
+// const car3 = {
+// 	name: "Nissan",
+// };
+
+// test.bind(car1)();
 
 // Zadanie Obiekty
 
