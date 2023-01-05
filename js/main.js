@@ -4,24 +4,70 @@
 // // =================================
 // // =================================
 
-const user = {
-	name: "Lily",
-	age: 23,
-};
 
-const pet = {
-	name: "Drops",
-	type: "dog",
-};
 
-const userInfo = Object.assign({}, user, pet);
-console.log(user);
-console.log(pet);
-console.log(userInfo);
 
-const userCopy = Object.assign({}, user);
-userCopy.age = 25; 
-console.log(userCopy);
+
+// const colors = ["red", "green", "blue"];
+// const firstColor = colors[0];
+// const secondColor = colors[1];
+
+// const [first, second] = colors;
+
+// console.log(firstColor, secondColor);
+// console.log(first, second);
+
+// const [, , okej] = colors;
+// console.log(okej);
+
+// const person = {
+// 	name: "Lily",
+// 	age: 23,
+// 	job: "DJ",
+// 	car: {
+// 		brand: "Dodge",
+// 		model: "Viper",
+// 	},
+// };
+
+// const showInfo = ({ name, age, job }) => {
+// 	console.log(`${name} pracuje jako ${job} i ma ${age} lat/a.`);
+// };
+
+// showInfo(person);
+
+// const showInfo2 = ({ car: { brand, model } }) => {
+// 	console.log(`Jej samochód to ${brand} ${model}`);
+// };
+
+// showInfo2(person);
+
+// const showInfo3 = () => {
+// 	const {
+// 		car: { brand, model },
+// 	} = person;
+// 	console.log(`Jej samochód to ${brand} ${model}`);
+// };
+
+// showInfo3(person);
+// const user = {
+// 	name: "Lily",
+// 	age: 23,
+// };
+
+// const pet = {
+// 	name: "Drops",
+// 	type: "dog",
+// };
+
+// const userInfo = Object.assign({}, user, pet);
+// console.log(user);
+// console.log(pet);
+// console.log(userInfo);
+
+// const userCopy = Object.assign({}, user);
+// userCopy.age = 25;
+// console.log(userCopy);
 
 // class Animal {
 // 	constructor(name) {
